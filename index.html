@@ -15,3 +15,69 @@
     <form action="#" method="post">
         <fieldset>
             <legend>Datos del cliente</legend>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" minlength="18" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+
+            <label for="hora">Hora aproximada de entrega:</label>
+            <input type="time" id="hora" name="hora" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pedido de pescado</legend>
+
+            <label for="tipo_pescado">Tipo de pescado:</label>
+            <select id="tipo_pescado" name="tipo_pescado" required>
+                <option value="calamares">Calamares</option>
+                <option value="adobo">Adobo</option>
+                <option value="boquerones">Boquerones</option>
+            </select>
+
+            <label for="raciones">Número de raciones:</label>
+            <input type="number" id="raciones" name="raciones" min="1" max="5" required>
+
+            <label for="acompanyamiento">Acompañamiento (opcional):</label><br>
+            <input type="checkbox" id="patatas" name="acompanyamiento" value="Patatas fritas">
+            <label for="patatas">Patatas fritas</label><br>
+            <input type="checkbox" id="ensaladilla" name="acompanyamiento" value="Ensaladilla">
+            <label for="ensaladilla">Ensaladilla</label><br>
+            <input type="checkbox" id="manzanilla" name="acompanyamiento" value="Botella de Manzanilla">
+            <label for="manzanilla">Botella de Manzanilla</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Método de pago</legend>
+
+            <label for="pago">Método de pago:</label>
+            <select id="pago" name="pago" required>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Instrucciones adicionales (opcional)</legend>
+            <textarea id="instrucciones" name="instrucciones" maxlength="150"></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar Pedido</button>
+    </form>
+
+    <footer>
+        <p>Desarrollado por [Tu Nombre Completo]</p>
+    </footer>
+</body>
+</html>
